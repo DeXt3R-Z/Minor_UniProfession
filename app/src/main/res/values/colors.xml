@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="nightly_black_bg_dark">#131315</color>
+    <color name="raisin_black_medium">#202023</color>
+    <color name="raisin_black_light">#222225</color>
+    <color name="raisin_black_light_alt">#242427</color>
+    <color name="onyx_btn_black">#252529</color>
+    <color name="primary_green">#9CF877</color>
+    <color name="lime_green">#DDFF9C</color>
+    <color name="bluish_white">#E7E4F1</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="et_hint">#8C4A4A4A</color>
+    <color name="spinner_dropdown_hint">#8C2A2A2C</color>
+    <color name="interest_default_state_color">#B8B8B8</color>
+    <color name="gradient_green">#BDFC8A</color>
+    <color name="grey">#2F2F35</color>
+</resources>
+

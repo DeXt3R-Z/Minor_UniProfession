@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_universal"
+    tools:context=".home_screen.Fragment_MainScreen">
+
+
+    <View
+        android:id="@+id/view_topBarBg"
+        android:layout_width="0dp"
+        android:layout_height="80dp"
+        android:background="@drawable/main_feed_top_bar_bg"
+        android:outlineSpotShadowColor="#000000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_AppName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:elevation="50dp"
+        android:fontFamily="@font/poppins_bold"
+        android:text="@string/app_name"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toBottomOf="@+id/view_topBarBg"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/view_topBarBg"
+        tools:textColor="@color/lime_green" />
+
+    <soup.neumorphism.NeumorphImageButton
+        style="@style/btn_Search"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginEnd="-8dp"
+        android:elevation="50dp"
+        android:scaleType="center"
+        android:src="@drawable/search_icon"
+        app:layout_constraintBottom_toBottomOf="@+id/view_topBarBg"
+        app:layout_constraintEnd_toStartOf="@+id/btn_Notifications"
+        app:layout_constraintTop_toTopOf="@+id/view_topBarBg" />
+
+    <soup.neumorphism.NeumorphImageButton
+        android:id="@+id/btn_Notifications"
+        style="@style/btn_Search"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginEnd="8dp"
+        android:elevation="50dp"
+        android:scaleType="center"
+        android:src="@drawable/notification_icon"
+        app:layout_constraintBottom_toBottomOf="@+id/view_topBarBg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/view_topBarBg" />
+
+    <FrameLayout
+        android:id="@+id/Fragment_NavBar_Tab_layout_holder"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="15dp"
+        app:layout_constraintBottom_toTopOf="@id/view2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view_topBarBg" />
+
+
+    <View
+        android:id="@+id/view2"
+        android:layout_width="0dp"
+        android:layout_height="75dp"
+        android:background="@drawable/bottom_navbar_bg"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <View
+        android:id="@+id/btn_HomeTab"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:elevation="50dp"
+        android:background="@drawable/icon_home"
+        app:layout_constraintTop_toTopOf="@+id/view2"
+        app:layout_constraintBottom_toBottomOf="@id/view2"
+        app:layout_constraintStart_toStartOf="@id/view2"
+        app:layout_constraintEnd_toStartOf="@id/btn_Leaderboard"
+        app:layout_constraintHorizontal_bias="0.5"
+        />
+
+    <View
+        android:id="@+id/btn_Leaderboard"
+        android:layout_width="35dp"
+        android:layout_height="40dp"
+        android:elevation="50dp"
+        android:background="@drawable/leaderboard"
+        app:layout_constraintTop_toTopOf="@+id/view2"
+        app:layout_constraintBottom_toBottomOf="@id/view2"
+        app:layout_constraintStart_toEndOf="@+id/btn_HomeTab"
+        app:layout_constraintEnd_toStartOf="@id/btn_AddProject"
+        app:layout_constraintHorizontal_bias="0.5"
+        />
+
+    <View
+        android:id="@+id/btn_AddProject"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:elevation="50dp"
+        android:background="@drawable/icon_add"
+        app:layout_constraintTop_toTopOf="@+id/view2"
+        app:layout_constraintBottom_toBottomOf="@+id/view2"
+        app:layout_constraintEnd_toStartOf="@+id/btn_ChatTab"
+        app:layout_constraintStart_toEndOf="@+id/btn_Leaderboard"
+        app:layout_constraintHorizontal_bias="0.5"
+        />
+
+    <View
+        android:id="@+id/btn_ChatTab"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:elevation="50dp"
+        android:background="@drawable/chat_deselected"
+        app:layout_constraintTop_toTopOf="@+id/view2"
+        app:layout_constraintBottom_toBottomOf="@+id/view2"
+        app:layout_constraintEnd_toStartOf="@+id/btn_ProfileTab"
+        app:layout_constraintStart_toEndOf="@+id/btn_AddProject"
+        app:layout_constraintHorizontal_bias="0.5"
+        />
+
+
+    <View
+        android:id="@+id/btn_ProfileTab"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:elevation="50dp"
+        android:background="@drawable/account_deselected"
+        app:layout_constraintBottom_toBottomOf="@+id/view2"
+        app:layout_constraintEnd_toEndOf="@id/view2"
+        app:layout_constraintTop_toTopOf="@+id/view2"
+        app:layout_constraintStart_toEndOf="@+id/btn_ChatTab"
+        app:layout_constraintHorizontal_bias="0.5"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
